@@ -34,7 +34,7 @@ if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
 endif
 
 "Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
+nmap <leader>li :set list!<CR>
 
 "Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
