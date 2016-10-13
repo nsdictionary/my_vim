@@ -18,10 +18,14 @@ Plugin 'mileszs/ack.vim'
 Plugin 'mru.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+
+Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-rails'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on
