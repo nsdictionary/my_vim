@@ -21,6 +21,7 @@ Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-rails'
 
 call vundle#end()
 filetype plugin indent on
