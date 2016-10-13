@@ -22,6 +22,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'bufexplorer.zip'
 
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-rails'

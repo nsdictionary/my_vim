@@ -41,6 +41,16 @@ nmap <leader>vx :VimuxInterruptRunner<cr>
 
 
 "----------------------------------------------------------------------"
+" bufExplorer plugin
+"----------------------------------------------------------------------"
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+map <leader>o :BufExplorer<cr>
+
+
+"----------------------------------------------------------------------"
 " Vim airline
 "----------------------------------------------------------------------"
 let g:airline_powerline_fonts = 1
@@ -62,7 +72,7 @@ nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
 
 "----------------------------------------------------------------------"
-" => CTRL-P
+" CTRL-P
 "----------------------------------------------------------------------"
 let g:ctrlp_working_path_mode = 0
 
