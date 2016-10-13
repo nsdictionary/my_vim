@@ -21,6 +21,7 @@ Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
 
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-rails'
