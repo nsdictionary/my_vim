@@ -161,3 +161,5 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+set clipboard=unnamed " This enable use system clipboard. You sholud upgrade vim before use

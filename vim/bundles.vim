@@ -25,9 +25,14 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bufexplorer.zip'
 
 Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-rails'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 filetype plugin indent on

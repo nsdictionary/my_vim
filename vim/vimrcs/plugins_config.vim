@@ -144,3 +144,26 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 "----------------------------------------------------------------------"
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"----------------------------------------------------------------------"
+" EasyMotion
+"----------------------------------------------------------------------"
+map <Leader> <Plug>(easymotion-prefix)
+
+
+"----------------------------------------------------------------------"
+" youcompleteme
+"----------------------------------------------------------------------"
+let g:EclimCompletionMethod = 'omnifunc'
+
+"To avoid conflict snippets
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
+nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>p :YcmCompleter GetParent<CR>
