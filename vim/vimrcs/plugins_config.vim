@@ -151,6 +151,10 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 "----------------------------------------------------------------------"
 map <Leader> <Plug>(easymotion-prefix)
 
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
 
 "----------------------------------------------------------------------"
 " youcompleteme
@@ -162,8 +166,14 @@ let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
-nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>t :YcmCompleter GetType<CR>
-nnoremap <leader>p :YcmCompleter GetParent<CR>
+"nnoremap <leader>g :YcmCompleter GoTo<CR>
+"nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
+"nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+"nnoremap <leader>t :YcmCompleter GetType<CR>
+"nnoremap <leader>p :YcmCompleter GetParent<CR>
+
+
+"----------------------------------------------------------------------"
+" taglist
+"----------------------------------------------------------------------"
+let Tlist_Ctags_Cmd = '/usr/local/Cellar/ctags/5.8_1/bin/ctags'

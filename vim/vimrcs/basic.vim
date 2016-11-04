@@ -20,10 +20,6 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
-
 "set relativenumber
 set number
 set showmatch
@@ -45,6 +41,17 @@ highlight SpecialKey guifg=#4a4a59
 
 "load bundles
 source ~/.vim/bundles.vim
+
+" Stupid shift key fixes
+cmap W w                        
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+cmap Tabe tabe
+
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
 
 
 "----------------------------------------------------------------------"

@@ -33,6 +33,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'valloric/youcompleteme'
+Plugin 'taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
