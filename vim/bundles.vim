@@ -30,10 +30,12 @@ Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
+"Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'valloric/youcompleteme'
 Plugin 'taglist.vim'
+Plugin 'paradigm/vim-multicursor'
+Plugin 'gorodinskiy/vim-coloresque'
 
 call vundle#end()
 filetype plugin indent on

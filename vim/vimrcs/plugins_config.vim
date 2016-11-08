@@ -177,3 +177,19 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " taglist
 "----------------------------------------------------------------------"
 let Tlist_Ctags_Cmd = '/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+
+
+"----------------------------------------------------------------------"
+" vim-multicursor  
+"----------------------------------------------------------------------"
+let g:multicursor_quit = "\<Esc>"
+nnoremap <Leader>mp :call MultiCursorPlaceCursor()<cr>
+nnoremap <Leader>mr :call MultiCursorRemoveCursors()<cr>
+nnoremap <Leader>mm :call MultiCursorManual()<cr>
+xnoremap <Leader>mv :call MultiCursorVisual()<cr>
+nnoremap <Leader>ms :call MultiCursorSearch('')<cr>
+nnoremap <leader>mw :<c-u>call MultiCursorSearch('<c-r><c-w>')<cr>
+xnoremap <leader>mb "*y<Esc>:call MultiCursorSearch('<c-r>=substitute(escape(@*, '\/.*$^~[]'), "\n", '\\n', "g")<cr>')<cr>
+
+highlight MultiCursor cterm=NONE ctermfg=red ctermbg=green
+"let g:multicursor_debug = 1
