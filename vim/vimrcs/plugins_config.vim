@@ -1,46 +1,4 @@
 "----------------------------------------------------------------------"
-" Rainbow Parentheses
-"----------------------------------------------------------------------"
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-
-"----------------------------------------------------------------------"
-" Line indent
-"----------------------------------------------------------------------"
-"let g:indentLine_leadingSpaceChar = '.'
-"let g:indentLine_leadingSpaceEnabled = 1
-"let g:indentLine_char = '┊'
-
-"Vim
-let g:indentLine_color_term = 239
-
-"GVim
-let g:indentLine_color_gui = 'Grey30'
-
-"none X terminal
-let g:indentLine_color_tty_light = 7 " (default: 4)
-let g:indentLine_color_dark = 1 " (default: 2)
-
-
-"----------------------------------------------------------------------"
-" Vimux
-"----------------------------------------------------------------------"
-let g:VimuxHeight = "30"
-let g:VimuxOrientation = 'v'
-let g:VimuxUseNearestPane = 0
-
-nmap <leader>vp :VimuxPromptCommand<cr>
-nmap <leader>vl :VimuxRunLastCommand<cr>
-nmap <leader>vq :VimuxCloseRunner<cr>
-nmap <leader>vx :VimuxInterruptRunner<cr>
-
-"nmap <leader>vg :call VimuxRunCommand("git status")<CR>
-
-
-"----------------------------------------------------------------------"
 " bufExplorer plugin
 "----------------------------------------------------------------------"
 let g:bufExplorerDefaultHelp=0
@@ -97,46 +55,12 @@ map <leader>nf :NERDTreeFind<cr>
 
 
 "----------------------------------------------------------------------"
-" vim-multiple-cursors
-"----------------------------------------------------------------------"
-let g:multi_cursor_next_key="\<C-s>"
-
-
-"----------------------------------------------------------------------"
 " surround.vim config
 " Annotate strings with gettext http://amix.dk/blog/post/19678
 "----------------------------------------------------------------------"
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
-
-"----------------------------------------------------------------------"
-" Vim-go
-"----------------------------------------------------------------------"
-let g:go_fmt_command = "goimports"
-
-
-"----------------------------------------------------------------------"
-"  Syntastic (syntax checker)
-"----------------------------------------------------------------------"
-" Python
-let g:syntastic_python_checkers=['pyflakes']
-
-" Javascript
-let g:syntastic_javascript_checkers = ['jshint']
-
-" Go
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
-
-" Custom CoffeeScript SyntasticCheck
-func! SyntasticCheckCoffeescript()
-    let l:filename = substitute(expand("%:p"), '\(\w\+\)\.coffee', '.coffee.\1.js', '')
-    execute "tabedit " . l:filename
-    execute "SyntasticCheck"
-    execute "Errors"
-endfunc
-nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 
 
 "----------------------------------------------------------------------"
@@ -193,3 +117,9 @@ xnoremap <leader>mb "*y<Esc>:call MultiCursorSearch('<c-r>=substitute(escape(@*,
 
 highlight MultiCursor cterm=NONE ctermfg=red ctermbg=green
 "let g:multicursor_debug = 1
+
+
+"----------------------------------------------------------------------"
+" NERDcommenter 
+"----------------------------------------------------------------------"
+let NERDSpaceDelims=1
