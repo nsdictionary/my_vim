@@ -53,6 +53,10 @@ cmap Tabe tabe
 nnoremap j gj
 nnoremap k gk
 
+" Resize split windows
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
 
 "----------------------------------------------------------------------"
 " Files, backups and undo
