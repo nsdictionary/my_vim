@@ -97,11 +97,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 "nnoremap <leader>p :YcmCompleter GetParent<CR>
 
 
-"----------------------------------------------------------------------"
-" taglist
-"----------------------------------------------------------------------"
-let Tlist_Ctags_Cmd = '/usr/local/Cellar/ctags/5.8_1/bin/ctags'
-
 
 "----------------------------------------------------------------------"
 " vim-multicursor  
