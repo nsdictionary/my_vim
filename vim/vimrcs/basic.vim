@@ -23,6 +23,8 @@ nmap <leader>w :w!<cr>
 "set relativenumber
 set number
 set showmatch
+set hlsearch
+nnoremap <CR> :nohlsearch<CR><CR>
 
 "esc to english
 if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
@@ -162,8 +164,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
