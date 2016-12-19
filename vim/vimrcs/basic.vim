@@ -24,6 +24,7 @@ nmap <leader>w :w!<cr>
 set number
 set showmatch
 set hlsearch
+set hidden
 nnoremap <CR> :nohlsearch<CR><CR>
 
 "esc to english
@@ -43,13 +44,6 @@ highlight SpecialKey guifg=#4a4a59
 
 "load bundles
 source ~/.vim/bundles.vim
-
-" Stupid shift key fixes
-cmap W w                        
-cmap WQ wq
-cmap wQ wq
-cmap Q q
-cmap Tabe tabe
 
 " Wrapped lines goes down/up to next row, rather than next line in file.
 nnoremap j gj
@@ -93,6 +87,8 @@ map <leader>ba :bufdo bd<cr>
 
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
+nmap <leader>T :enew<cr>
+nmap <leader>bq :bp <BAR> bd #<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>

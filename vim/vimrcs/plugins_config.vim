@@ -13,6 +13,8 @@ map <leader>o :BufExplorer<cr>
 "----------------------------------------------------------------------"
 let g:airline_powerline_fonts = 1
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 "----------------------------------------------------------------------"
