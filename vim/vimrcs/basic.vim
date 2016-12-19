@@ -24,7 +24,6 @@ nmap <leader>w :w!<cr>
 set number
 set showmatch
 set hlsearch
-set hidden
 nnoremap <CR> :nohlsearch<CR><CR>
 
 "esc to english
