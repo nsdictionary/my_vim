@@ -22,6 +22,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'paradigm/vim-multicursor'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'AutoComplPop'
 
 call vundle#end()
 filetype plugin indent on
