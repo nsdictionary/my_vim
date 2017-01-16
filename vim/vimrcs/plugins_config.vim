@@ -62,7 +62,6 @@ vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
-
 "----------------------------------------------------------------------"
 " Git gutter (Git diff)
 "----------------------------------------------------------------------"
@@ -100,3 +99,12 @@ highlight MultiCursor cterm=NONE ctermfg=red ctermbg=green
 " NERDcommenter 
 "----------------------------------------------------------------------"
 let NERDSpaceDelims=1
+
+
+"----------------------------------------------------------------------"
+" Vimroom
+"----------------------------------------------------------------------"
+let g:goyo_width=100
+let g:goyo_margin_top = 2
+let g:goyo_margin_bottom = 2
+nnoremap <silent> <leader>z :Goyo<cr>
