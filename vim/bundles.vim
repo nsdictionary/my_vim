@@ -28,5 +28,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'amix/vim-zenroom2'
 Plugin 'junegunn/limelight.vim'
 
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()
 filetype plugin indent on
