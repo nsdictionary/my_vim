@@ -150,6 +150,7 @@ set ffs=unix,dos,mac
 
 " Set split window postion
 set splitright
+set splitbelow
 
 
 "----------------------------------------------------------------------"
