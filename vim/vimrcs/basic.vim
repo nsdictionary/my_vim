@@ -51,6 +51,8 @@ nnoremap k gk
 " Resize split windows
 nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> 0 :vertical res+5<CR>
+nnoremap <silent> 9 :vertical res-5<CR>
 
 
 "----------------------------------------------------------------------"
