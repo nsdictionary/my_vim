@@ -100,3 +100,11 @@ highlight MultiCursor cterm=NONE ctermfg=red ctermbg=green
 "----------------------------------------------------------------------"
 let NERDSpaceDelims=1
 
+
+"----------------------------------------------------------------------"
+" indentline
+"----------------------------------------------------------------------"
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 239
+
+

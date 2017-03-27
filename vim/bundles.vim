@@ -23,6 +23,7 @@ Plugin 'paradigm/vim-multicursor'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'AutoComplPop'
+Plugin 'yggdroot/indentline'
 
 call vundle#end()
 filetype plugin indent on
