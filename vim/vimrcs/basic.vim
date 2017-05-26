@@ -26,6 +26,14 @@ set showmatch
 set hlsearch
 nnoremap <CR> :nohlsearch<CR><CR>
 
+" improving vim rendering
+set ttyfast
+set lazyredraw
+set synmaxcol=128
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+
 "esc to english
 if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
   autocmd InsertLeave * call libcall('/usr/local/lib/libInputSourceSwitcher.dylib', 'Xkb_Switch_setXkbLayout', 'com.apple.keylayout.US')
