@@ -93,6 +93,7 @@ xnoremap <leader>mb "*y<Esc>:call MultiCursorSearch('<c-r>=substitute(escape(@*,
 
 highlight MultiCursor cterm=NONE ctermfg=red ctermbg=green
 "let g:multicursor_debug = 1
+vmap <silent> <C-m> :call MarkMultipleClean()<CR>
 
 
 "----------------------------------------------------------------------"

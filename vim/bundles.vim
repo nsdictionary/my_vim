@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'AutoComplPop'
 Plugin 'yggdroot/indentline'
 Plugin 'osyo-manga/vim-over'
+Plugin 'adinapoli/vim-markmultiple'
 
 call vundle#end()
 filetype plugin indent on
