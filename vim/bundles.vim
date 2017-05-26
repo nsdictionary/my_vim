@@ -24,6 +24,7 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'AutoComplPop'
 Plugin 'yggdroot/indentline'
+Plugin 'osyo-manga/vim-over'
 
 call vundle#end()
 filetype plugin indent on
