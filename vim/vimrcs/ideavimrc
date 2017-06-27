@@ -1,5 +1,6 @@
 set surround
 set showmode
+set visualbell
 
 " Smart way to move between windows
 map <C-j> <C-W>j
