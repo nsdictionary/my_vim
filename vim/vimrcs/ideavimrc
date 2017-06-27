@@ -1,4 +1,5 @@
 set surround
+set showmode
 
 " Smart way to move between windows
 map <C-j> <C-W>j
