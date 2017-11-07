@@ -27,6 +27,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'osyo-manga/vim-over'
 Plugin 'adinapoli/vim-markmultiple'
 Plugin 'johngrib/vim-game-code-break'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
