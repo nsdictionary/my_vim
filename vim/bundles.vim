@@ -29,6 +29,7 @@ Plugin 'adinapoli/vim-markmultiple'
 Plugin 'johngrib/vim-game-code-break'
 Plugin 'scrooloose/syntastic'
 Plugin 'elzr/vim-json'
+Plugin 'bronson/vim-trailing-whitespace'
 
 call vundle#end()
 filetype plugin indent on
