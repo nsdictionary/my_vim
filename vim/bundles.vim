@@ -28,6 +28,7 @@ Plugin 'osyo-manga/vim-over'
 Plugin 'adinapoli/vim-markmultiple'
 Plugin 'johngrib/vim-game-code-break'
 Plugin 'scrooloose/syntastic'
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 filetype plugin indent on
