@@ -22,7 +22,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'paradigm/vim-multicursor'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'AutoComplPop'
+" Plugin 'AutoComplPop'
+Plugin 'ajh17/vimcompletesme'
 Plugin 'yggdroot/indentline'
 Plugin 'osyo-manga/vim-over'
 Plugin 'adinapoli/vim-markmultiple'
@@ -30,6 +31,7 @@ Plugin 'johngrib/vim-game-code-break'
 Plugin 'scrooloose/syntastic'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'FelikZ/ctrlp-py-matcher'
 
 call vundle#end()
 filetype plugin indent on
