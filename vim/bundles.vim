@@ -36,7 +36,8 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
-"Plugin 'paredit.vim'
+Plugin 'paredit.vim'
+Plugin 'venantius/vim-cljfmt'
 
 call vundle#end()
 filetype plugin indent on
