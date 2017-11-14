@@ -22,7 +22,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'paradigm/vim-multicursor'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'AutoComplPop'
 Plugin 'ajh17/vimcompletesme'
 Plugin 'yggdroot/indentline'
 Plugin 'osyo-manga/vim-over'
@@ -32,6 +31,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'FelikZ/ctrlp-py-matcher'
+
+" Clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kien/rainbow_parentheses.vim'
+"Plugin 'paredit.vim'
 
 call vundle#end()
 filetype plugin indent on
