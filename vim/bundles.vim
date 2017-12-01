@@ -31,6 +31,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'lyokha/vim-xkbswitch'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'

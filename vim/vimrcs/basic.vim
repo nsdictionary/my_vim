@@ -35,9 +35,8 @@ set nocursorline
 set norelativenumber
 
 "esc to english
-if has('mac') && filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
-  autocmd InsertLeave * call libcall('/usr/local/lib/libInputSourceSwitcher.dylib', 'Xkb_Switch_setXkbLayout', 'com.apple.keylayout.US')
-endif
+let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+let g:XkbSwitchEnabled = 1
 
 "Shortcut to rapidly toggle `set list`
 nmap <leader>li :set list!<CR>
