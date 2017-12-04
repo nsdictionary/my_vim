@@ -103,7 +103,7 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 "----------------------------------------------------------------------"
 " anyfold
 "----------------------------------------------------------------------"
-let anyfold_activate=1
+autocmd Filetype ruby,python,javascript,markdown,php,css let b:anyfold_activate=1
 let anyfold_fold_comments=0
 let anyfold_fold_toplevel=0
 set foldlevel=0
