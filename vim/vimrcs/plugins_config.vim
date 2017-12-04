@@ -70,7 +70,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 
 "----------------------------------------------------------------------"
-" NERDcommenter 
+" NERDcommenter
 "----------------------------------------------------------------------"
 let NERDSpaceDelims=1
 
@@ -84,7 +84,7 @@ let g:indentLine_char = '│'
 
 
 "----------------------------------------------------------------------"
-" syntastic 
+" syntastic
 "----------------------------------------------------------------------"
 let g:syntastic_ruby_rubocop_exec = '/usr/local/opt/rbenv/shims/rubocop'
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
@@ -108,3 +108,9 @@ let anyfold_fold_comments=0
 let anyfold_fold_toplevel=0
 set foldlevel=0
 autocmd User anyfoldLoaded normal zR
+
+
+"----------------------------------------------------------------------"
+" vim-notes
+"----------------------------------------------------------------------"
+let g:notes_directories = ['~/Dropbox/wiki']
