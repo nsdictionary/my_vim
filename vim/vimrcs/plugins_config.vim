@@ -98,3 +98,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive' }
+
+
+"----------------------------------------------------------------------"
+" anyfold
+"----------------------------------------------------------------------"
+let anyfold_activate=1
+let anyfold_fold_comments=0
+let anyfold_fold_toplevel=0
+set foldlevel=0
+autocmd User anyfoldLoaded normal zR

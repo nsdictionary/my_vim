@@ -29,6 +29,7 @@ Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'lyokha/vim-xkbswitch'
+Plugin 'pseewald/vim-anyfold'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
