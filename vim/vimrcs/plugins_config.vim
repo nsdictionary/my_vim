@@ -70,33 +70,6 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 
 "----------------------------------------------------------------------"
-" EasyMotion
-"----------------------------------------------------------------------"
-map <Leader> <Plug>(easymotion-prefix)
-
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-
-"----------------------------------------------------------------------"
-" vim-multicursor  
-"----------------------------------------------------------------------"
-let g:multicursor_quit = "\<Esc>"
-nnoremap <Leader>mp :call MultiCursorPlaceCursor()<cr>
-nnoremap <Leader>mr :call MultiCursorRemoveCursors()<cr>
-nnoremap <Leader>mm :call MultiCursorManual()<cr>
-xnoremap <Leader>mv :call MultiCursorVisual()<cr>
-nnoremap <Leader>ms :call MultiCursorSearch('')<cr>
-nnoremap <leader>mw :<c-u>call MultiCursorSearch('<c-r><c-w>')<cr>
-xnoremap <leader>mb "*y<Esc>:call MultiCursorSearch('<c-r>=substitute(escape(@*, '\/.*$^~[]'), "\n", '\\n', "g")<cr>')<cr>
-
-highlight MultiCursor cterm=NONE ctermfg=red ctermbg=green
-"let g:multicursor_debug = 1
-vmap <silent> <C-m> :call MarkMultipleClean()<CR>
-
-
-"----------------------------------------------------------------------"
 " NERDcommenter 
 "----------------------------------------------------------------------"
 let NERDSpaceDelims=1
