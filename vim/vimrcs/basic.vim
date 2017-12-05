@@ -34,6 +34,10 @@ set nocursorcolumn
 set nocursorline
 set norelativenumber
 
+"esc to english
+let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+let g:XkbSwitchEnabled = 1
+
 "Shortcut to rapidly toggle `set list`
 nmap <leader>li :set list!<CR>
 
