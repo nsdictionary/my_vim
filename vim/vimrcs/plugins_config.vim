@@ -113,4 +113,6 @@ autocmd User anyfoldLoaded normal zR
 "----------------------------------------------------------------------"
 " vim-notes
 "----------------------------------------------------------------------"
-let g:notes_directories = ['~/Dropbox/wiki']
+let g:notes_directories = ['~/Dropbox/notes']
+let g:notes_suffix = '.txt'
+let g:notes_title_sync = 'no'
