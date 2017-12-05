@@ -34,6 +34,7 @@ Plugin 'lyokha/vim-xkbswitch'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'itspriddle/vim-marked'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
