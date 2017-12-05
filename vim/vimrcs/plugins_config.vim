@@ -109,10 +109,3 @@ let anyfold_fold_toplevel=0
 set foldlevel=0
 autocmd User anyfoldLoaded normal zR
 
-
-"----------------------------------------------------------------------"
-" vim-notes
-"----------------------------------------------------------------------"
-let g:notes_directories = ['~/Dropbox/notes']
-let g:notes_suffix = '.txt'
-let g:notes_title_sync = 'no'

@@ -30,10 +30,6 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'pseewald/vim-anyfold'
 
-" Like emacs deft
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
-
 " Clojure
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
