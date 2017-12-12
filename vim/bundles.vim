@@ -29,6 +29,7 @@ Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'pseewald/vim-anyfold'
+Plugin 'tpope/vim-repeat'
 Plugin 'lyokha/vim-xkbswitch'
 
 " Markdown
