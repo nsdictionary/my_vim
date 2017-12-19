@@ -31,6 +31,7 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'pseewald/vim-anyfold'
 Plugin 'tpope/vim-repeat'
 Plugin 'lyokha/vim-xkbswitch'
+Plugin 'yuttie/comfortable-motion.vim'
 
 " Markdown
 Plugin 'godlygeek/tabular'

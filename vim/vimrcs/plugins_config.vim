@@ -120,3 +120,11 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_conceal = 0
+
+
+"----------------------------------------------------------------------"
+" comfortable-motion
+"----------------------------------------------------------------------"
+let g:comfortable_motion_no_default_key_mappings = 1
+nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
+nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>

@@ -61,6 +61,12 @@ nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <silent> 0 :vertical res+5<CR>
 nnoremap <silent> 9 :vertical res-5<CR>
 
+:" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+map <C-E> $
+map <C-A> ^
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+
 
 "----------------------------------------------------------------------"
 " Files, backups and undo
