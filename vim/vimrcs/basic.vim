@@ -24,6 +24,7 @@ nmap <leader>w :w!<cr>
 set number
 set showmatch
 set hlsearch
+set ic
 nnoremap <CR> :nohlsearch<CR><CR>
 
 " improving vim rendering
