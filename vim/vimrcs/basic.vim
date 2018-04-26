@@ -62,6 +62,10 @@ nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <silent> 0 :vertical res+5<CR>
 nnoremap <silent> 9 :vertical res-5<CR>
 
+
+"----------------------------------------------------------------------"
+" Mimic Emacs key binding
+"----------------------------------------------------------------------"
 " Map scroll key bind
 nnoremap <C-p> <C-y>
 nnoremap <C-n> <C-e>
@@ -73,6 +77,15 @@ inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
 vnoremap <C-a> ^
 vnoremap <C-e> $
+
+" Emacs Line Editing in Insert Mode Only
+inoremap <C-K> <Esc>lDa
+inoremap <C-U> <Esc>d0xi
+inoremap <C-Y> <Esc>pa
+inoremap <C-P> <Up>
+inoremap <C-N> <Down>
+inoremap <C-B> <Left>
+inoremap <C-F> <Right>
 
 
 "----------------------------------------------------------------------"
