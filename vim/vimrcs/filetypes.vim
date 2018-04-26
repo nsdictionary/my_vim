@@ -89,4 +89,4 @@ let g:vim_json_syntax_conceal = 0
 " Clojure section
 "----------------------------------------------------------------------"
 let g:paredit_mode=0
-
+autocmd FileType clojure nmap <buffer> cpP :Eval<cr>

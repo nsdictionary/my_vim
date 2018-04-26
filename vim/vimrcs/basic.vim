@@ -86,6 +86,14 @@ inoremap <C-P> <Up>
 inoremap <C-N> <Down>
 inoremap <C-B> <Left>
 inoremap <C-F> <Right>
+inoremap <C-X><C-S> <Esc>:w<CR>a
+
+" Edit
+inoremap <A-x> <Esc>:
+inoremap <A-f> <Esc>lwi
+inoremap <A-b> <Esc>bi
+inoremap <A-S-f> <Esc>lWi
+inoremap <A-S-b> <Esc>Bi
 
 
 "----------------------------------------------------------------------"
