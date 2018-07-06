@@ -67,7 +67,6 @@ function! CoffeeScriptFold()
     setl foldlevelstart=1
 endfunction
 au FileType coffee call CoffeeScriptFold()
-
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 
@@ -89,4 +88,5 @@ let g:vim_json_syntax_conceal = 0
 " Clojure section
 "----------------------------------------------------------------------"
 let g:paredit_mode=0
+autocmd FileType clojure let g:paredit_mode=1
 autocmd FileType clojure nmap <buffer> cpP :Eval<cr>

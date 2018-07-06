@@ -34,6 +34,7 @@ set synmaxcol=128
 set nocursorcolumn
 set nocursorline
 set norelativenumber
+set re=1
 
 "esc to english
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
