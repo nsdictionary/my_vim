@@ -32,6 +32,7 @@ Plugin 'pseewald/vim-anyfold'
 Plugin 'tpope/vim-repeat'
 Plugin 'lyokha/vim-xkbswitch'
 Plugin 'yuttie/comfortable-motion.vim'
+Plugin 'benmills/vimux'
 
 " Markdown
 Plugin 'godlygeek/tabular'
