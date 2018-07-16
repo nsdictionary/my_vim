@@ -46,5 +46,9 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'paredit.vim'
 Plugin 'venantius/vim-cljfmt'
 
+" Chess
+Plugin 'pgn.vim'
+Plugin 'Chess-files-.pgn-extension'
+
 call vundle#end()
 filetype plugin indent on

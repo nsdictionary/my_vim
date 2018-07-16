@@ -90,3 +90,9 @@ let g:vim_json_syntax_conceal = 0
 let g:paredit_mode=0
 autocmd FileType clojure let g:paredit_mode=1
 autocmd FileType clojure nmap <buffer> cpP :Eval<cr>
+
+
+"----------------------------------------------------------------------"
+" Chess section
+"----------------------------------------------------------------------"
+au BufNewFile,BufRead *.pgn    setf pgn
