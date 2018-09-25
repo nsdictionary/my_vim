@@ -34,6 +34,10 @@ Plugin 'lyokha/vim-xkbswitch'
 Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'benmills/vimux'
 
+" Goyo
+Plugin 'junegunn/goyo.vim'
+Plugin 'amix/vim-zenroom2'
+
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
