@@ -97,6 +97,9 @@ let NERDSpaceDelims=1
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#4a4a59'
 let g:indentLine_char = '│'
+" let g:indentLine_setConceal = 0
+" let g:indentLine_fileTypeExclude = ['json']
+let g:indentLine_fileType = ['ruby', 'python', 'javascript', 'clojure']
 
 
 "----------------------------------------------------------------------"
@@ -136,6 +139,7 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_conceal = 0
+let g:vim_markdown_auto_insert_bullets = 0
 
 
 "----------------------------------------------------------------------"

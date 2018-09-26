@@ -36,6 +36,7 @@ set nocursorcolumn
 set nocursorline
 set norelativenumber
 set re=1
+set conceallevel=0
 
 "esc to english
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
