@@ -170,11 +170,24 @@ let g:vimwiki_list = [
     \{
     \   'path': '~/Dropbox/wiki',
     \   'ext' : '.md',
-    \   'diary_rel_path': '.',
+    \   'diary_rel_path': 'diary',
     \},
 \]
-
 let g:vimwiki_conceallevel = 0
+
+command! WikiIndex :VimwikiIndex
+nmap <Leader>ww <Plug>VimwikiIndex
+nmap <Leader>wt <Plug>VimwikiTabIndex
+nmap <Leader>ws <Plug>VimwikiUISelect
+nmap <Leader>wi <Plug>VimwikiDiaryIndex
+nmap <Leader>w<Leader>w <Plug>VimwikiMakeDiaryNote
+nmap <Leader>w<Leader>t <Plug>VimwikiTabMakeDiaryNote
+nmap <Leader>w<Leader>y <Plug>VimwikiMakeYesterdayDiaryNote
+nmap <Leader>wh <Plug>Vimwiki2HTML
+nmap <Leader>whh <Plug>Vimwiki2HTMLBrowse
+nmap <LocalLeader>wt :VimwikiTable<CR>
+nmap <LocalLeader>ws :VimwikiSplitLink<CR>
+nmap <LocalLeader>wv :VimwikiVSplitLink<CR>
 
 function! LastModified()
   if g:md_modify_disabled
@@ -246,5 +259,5 @@ let g:md_modify_disabled = 0
 "----------------------------------------------------------------------"
 nmap <Leader>s :Startify<CR>
 nmap <Leader><Leader>s :SSave<CR>
-
+nmap <Leader><Leader>d :SDelete<CR>
 
