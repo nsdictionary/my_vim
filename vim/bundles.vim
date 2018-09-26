@@ -24,6 +24,7 @@ Plugin 'ajh17/vimcompletesme'
 Plugin 'yggdroot/indentline'
 Plugin 'osyo-manga/vim-over'
 Plugin 'johngrib/vim-game-code-break'
+Plugin 'johngrib/vim-game-snake'
 Plugin 'scrooloose/syntastic'
 Plugin 'elzr/vim-json'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -33,6 +34,10 @@ Plugin 'tpope/vim-repeat'
 Plugin 'lyokha/vim-xkbswitch'
 Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'benmills/vimux'
+
+" Wiki
+Plugin 'vimwiki/vimwiki'
+Plugin 'mhinz/vim-startify'
 
 " Goyo
 Plugin 'junegunn/goyo.vim'

@@ -161,3 +161,90 @@ map <Leader>dc :call VimuxRunCommand("docker exec -it restful rails c")<CR>
 map <Leader>dl :call VimuxRunCommand("docker logs -f restful")<CR>
 map <Leader>du :call VimuxRunCommand("cd ~/Workspace/sentbe-rails-restful && docker-compose up -d app")<CR>
 map <Leader>dr :call VimuxRunCommand("docker stop restful && docker rm restful && cd ~/Workspace/sentbe-rails-restful && docker-compose up -d app && docker logs -f restful")<CR>
+
+
+"----------------------------------------------------------------------"
+" vimwiki
+"----------------------------------------------------------------------"
+let g:vimwiki_list = [
+    \{
+    \   'path': '~/Dropbox/wiki',
+    \   'ext' : '.md',
+    \   'diary_rel_path': '.',
+    \},
+\]
+
+let g:vimwiki_conceallevel = 0
+
+function! LastModified()
+  if g:md_modify_disabled
+    return
+  endif
+  if &modified
+    " echo('markdown updated time modified')
+    let save_cursor = getpos(".")
+    let n = min([10, line("$")])
+
+    exe 'keepjumps 1,' . n . 's#^\(.\{,10}updated\s*: \).*#\1' .
+          \ strftime('%Y-%m-%d %H:%M:%S +0900') . '#e'
+    call histdel('search', -1)
+    call setpos('.', save_cursor)
+  endif
+endfun
+function! NewTemplate()
+
+  let l:wiki_directory = v:false
+
+  for wiki in g:vimwiki_list
+    if expand('%:p:h') == expand(wiki.path)
+      let l:wiki_directory = v:true
+      break
+    endif
+  endfor
+
+  if !l:wiki_directory
+    return
+  endif
+
+  if line("$") > 1
+    return
+  endif
+
+  let l:template = []
+  call add(l:template, '---')
+  call add(l:template, 'layout  : wiki')
+  call add(l:template, 'title   : ')
+  call add(l:template, 'summary : ')
+  call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+  call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+  call add(l:template, 'tags    : ')
+  call add(l:template, 'toc     : true')
+  call add(l:template, 'public  : true')
+  call add(l:template, 'parent  : ')
+  call add(l:template, 'latex   : false')
+  call add(l:template, '---')
+  call add(l:template, '* TOC')
+  call add(l:template, '{:toc}')
+  call add(l:template, '')
+  call add(l:template, '# ')
+  call setline(1, l:template)
+  execute 'normal! G'
+  execute 'normal! $'
+
+  echom 'new wiki page has created'
+endfunction
+augroup vimwikiauto
+  autocmd BufWritePre *wiki/*.md keepjumps call LastModified()
+  autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()
+augroup END
+
+let g:md_modify_disabled = 0
+
+
+"----------------------------------------------------------------------"
+" Startify
+"----------------------------------------------------------------------"
+nmap <Leader>s :Startify<CR>
+nmap <Leader><Leader>s :SSave<CR>
+
+
