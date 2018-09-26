@@ -172,6 +172,11 @@ let g:vimwiki_list = [
     \   'ext' : '.md',
     \   'diary_rel_path': 'diary',
     \},
+    \{
+    \   'path': '~/Dropbox/wiki/blog/_wiki',
+    \   'ext' : '.md',
+    \   'diary_rel_path': '.',
+    \},
 \]
 let g:vimwiki_conceallevel = 0
 
