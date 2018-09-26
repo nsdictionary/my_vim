@@ -99,7 +99,7 @@ let g:indentLine_color_gui = '#4a4a59'
 let g:indentLine_char = '│'
 " let g:indentLine_setConceal = 0
 " let g:indentLine_fileTypeExclude = ['json']
-let g:indentLine_fileType = ['ruby', 'python', 'bash', 'javascript', 'clojure']
+let g:indentLine_fileType = ['ruby', 'python', 'bash', 'javascript', 'clojure', 'html']
 
 
 "----------------------------------------------------------------------"
@@ -175,6 +175,10 @@ let g:vimwiki_list = [
     \   'path': '~/Dropbox/wiki',
     \   'ext' : '.md',
     \   'diary_rel_path': 'diary',
+    \   'path_html': '~/Dropbox/wiki/site_html/',
+    \   'template_path': '~/Dropbox/wiki/templates',
+    \   'template_default': 'default',
+    \   'template_ext': '.html',
     \},
     \{
     \   'path': '~/Dropbox/wiki/blog/_wiki',
