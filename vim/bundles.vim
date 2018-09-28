@@ -34,6 +34,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'lyokha/vim-xkbswitch'
 Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'benmills/vimux'
+Plugin 'itchyny/calendar.vim'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'
@@ -54,6 +55,9 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'paredit.vim'
 Plugin 'venantius/vim-cljfmt'
+
+" Elm
+Plugin 'elmcast/elm-vim'
 
 " Chess
 Plugin 'pgn.vim'

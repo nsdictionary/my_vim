@@ -292,3 +292,27 @@ let g:startify_list_order = [
   \ ['    Commands'],
   \'commands'
   \]
+
+
+"----------------------------------------------------------------------"
+" vim-trailing-whitespace
+"----------------------------------------------------------------------"
+let g:extra_whitespace_ignored_filetypes = ['calendar']
+
+
+"----------------------------------------------------------------------"
+" calendar
+"----------------------------------------------------------------------"
+nmap <Leader><Leader>c :Calendar -view=year -split=vertical -width=27<CR>
+"nmap <Leader><Leader>c :Calendar -view=year -split=horizontal -position=below -height=12<CR>
+"nmap <Leader><Leader>c :Calendar -view=clock<CR>
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
+
+"----------------------------------------------------------------------"
+" Elm
+"----------------------------------------------------------------------"
+nnoremap <Leader>el :ElmEvalLine<CR>
+vnoremap <Leader>es :<C-u>ElmEvalSelection<CR>
+nnoremap <Leader>em :ElmMakeCurrentFile<CR>
