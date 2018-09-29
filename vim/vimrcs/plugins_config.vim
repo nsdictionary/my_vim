@@ -313,6 +313,5 @@ let g:calendar_google_task = 1
 "----------------------------------------------------------------------"
 " Elm
 "----------------------------------------------------------------------"
-nnoremap <Leader>el :ElmEvalLine<CR>
-vnoremap <Leader>es :<C-u>ElmEvalSelection<CR>
-nnoremap <Leader>em :ElmMakeCurrentFile<CR>
+let g:elm_setup_keybindings = 0
+nnoremap <Leader>ef :ElmFormat<CR>
