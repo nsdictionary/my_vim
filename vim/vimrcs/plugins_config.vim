@@ -99,7 +99,7 @@ let g:indentLine_color_gui = '#4a4a59'
 let g:indentLine_char = '│'
 " let g:indentLine_setConceal = 0
 " let g:indentLine_fileTypeExclude = ['json']
-let g:indentLine_fileType = ['ruby', 'python', 'bash', 'javascript', 'clojure', 'html', 'elm']
+let g:indentLine_fileType = ['ruby', 'python', 'bash', 'javascript', 'clojure', 'html', 'elm', 'lisp']
 
 
 "----------------------------------------------------------------------"
@@ -201,6 +201,8 @@ nmap <Leader>whh <Plug>Vimwiki2HTMLBrowse
 nmap <LocalLeader>wt :VimwikiTable<CR>
 nmap <LocalLeader>ws :VimwikiSplitLink<CR>
 nmap <LocalLeader>wv :VimwikiVSplitLink<CR>
+" nmap <> <Plug>VimwikiFollowLink
+" nmap <> <Plug>VimwikiGoBackLink
 
 function! LastModified()
   if g:md_modify_disabled
@@ -314,4 +316,6 @@ let g:calendar_google_task = 1
 " Elm
 "----------------------------------------------------------------------"
 let g:elm_setup_keybindings = 0
-nnoremap <Leader>ef :ElmFormat<CR>
+let g:elm_format_autosave = 1
+nnoremap <LocalLeader>ef :ElmFormat<CR>
+
