@@ -187,7 +187,6 @@ else
   color luna-term
 endif
 
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -197,6 +196,10 @@ set ffs=unix,dos,mac
 " Set split window postion
 set splitright
 set splitbelow
+
+" Make the 81st column stand out
+highlight ColorColumn ctermbg=green ctermfg=black
+call matchadd('ColorColumn', '\%81v', 100)
 
 
 "----------------------------------------------------------------------"
@@ -221,3 +224,5 @@ set si "Smart indent
 set wrap "Wrap lines
 
 set clipboard=unnamed " This enable use system clipboard. You sholud upgrade vim before use
+
+
