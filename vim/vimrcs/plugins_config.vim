@@ -320,3 +320,9 @@ let g:elm_setup_keybindings = 0
 let g:elm_format_autosave = 1
 nnoremap <LocalLeader>ef :ElmFormat<CR>
 
+
+"----------------------------------------------------------------------"
+" vim-vmath
+"----------------------------------------------------------------------"
+vmap <expr>  ++  VMATH_YankAndAnalyse()
+nmap         ++  vip++

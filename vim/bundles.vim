@@ -35,6 +35,7 @@ Plugin 'lyokha/vim-xkbswitch'
 Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'benmills/vimux'
 Plugin 'itchyny/calendar.vim'
+Plugin 'nixon/vim-vmath'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'
