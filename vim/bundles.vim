@@ -36,6 +36,8 @@ Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'benmills/vimux'
 Plugin 'itchyny/calendar.vim'
 Plugin 'nixon/vim-vmath'
+Plugin 'vis'
+Plugin 'fisadev/dragvisuals.vim'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'

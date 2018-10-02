@@ -326,3 +326,13 @@ nnoremap <LocalLeader>ef :ElmFormat<CR>
 "----------------------------------------------------------------------"
 vmap <expr>  ++  VMATH_YankAndAnalyse()
 nmap         ++  vip++
+
+
+"----------------------------------------------------------------------"
+" dragvisuals
+"----------------------------------------------------------------------"
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  F        DVB_Duplicate()
