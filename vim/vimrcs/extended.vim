@@ -58,6 +58,14 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 
 
 "----------------------------------------------------------------------"
+" Apperance
+"----------------------------------------------------------------------"
+" Make the 81st column stand out
+highlight ColorColumn ctermbg=green
+call matchadd('ColorColumn', '\%81v', 100)
+
+
+"----------------------------------------------------------------------"
 " Functions
 "----------------------------------------------------------------------"
 " http://vim.wikia.com/wiki/Copy_filename_to_clipboard
