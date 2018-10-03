@@ -298,9 +298,9 @@ let g:startify_list_order = [
 
 
 "----------------------------------------------------------------------"
-" vim-trailing-whitespace
+" vim-better-whitespace
 "----------------------------------------------------------------------"
-let g:extra_whitespace_ignored_filetypes = ['calendar']
+let g:better_whitespace_filetypes_blacklist=['calendar']
 
 
 "----------------------------------------------------------------------"
