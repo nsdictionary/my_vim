@@ -2,15 +2,13 @@ let g:vimwiki_list = [
     \{
     \   'path': '~/Dropbox/wiki',
     \   'ext' : '.md',
+    \   'syntax': 'markdown',
     \   'diary_rel_path': 'diary',
-    \   'path_html': '~/Dropbox/wiki/site_html/',
-    \   'template_path': '~/Dropbox/wiki/templates',
-    \   'template_default': 'default',
-    \   'template_ext': '.html',
     \},
     \{
     \   'path': '~/Dropbox/wiki/blog/_wiki',
     \   'ext' : '.md',
+    \   'syntax': 'markdown',
     \   'diary_rel_path': '.',
     \},
 \]
