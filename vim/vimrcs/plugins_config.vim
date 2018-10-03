@@ -300,7 +300,10 @@ let g:startify_list_order = [
 "----------------------------------------------------------------------"
 " vim-better-whitespace
 "----------------------------------------------------------------------"
-let g:better_whitespace_filetypes_blacklist=['calendar']
+highlight ExtraWhitespace ctermbg=red
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 0
+let g:better_whitespace_filetypes_blacklist=['calendar', 'diff', 'gitcommit', 'help']
 
 
 "----------------------------------------------------------------------"
