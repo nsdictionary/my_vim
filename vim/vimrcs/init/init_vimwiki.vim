@@ -87,9 +87,9 @@ function! NewTemplate()
 
   echom 'new wiki page has created'
 endfunction
-augroup vimwikiauto
-  autocmd BufWritePre *wiki/*.md keepjumps call LastModified()
-  autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()
-augroup END
+" augroup vimwikiauto
+  " autocmd BufWritePre *wiki/*.md keepjumps call LastModified()
+  " autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()
+" augroup END
 
 let g:md_modify_disabled = 0
