@@ -76,6 +76,7 @@ nnoremap <C-n> <C-e>
 " Map Ctrl-A -> Start of line, Ctrl-E -> End of line
 map <C-E> $
 map <C-A> ^
+noremap <c-i> <c-a>
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
 vnoremap <C-a> ^
