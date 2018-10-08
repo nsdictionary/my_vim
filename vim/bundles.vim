@@ -38,6 +38,7 @@ Plugin 'itchyny/calendar.vim'
 Plugin 'nixon/vim-vmath'
 Plugin 'vis'
 Plugin 'fisadev/dragvisuals.vim'
+Plugin 'johngrib/vim-f-hangul'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'
