@@ -47,15 +47,3 @@ endif
 " 현재 편집중인 파일 경로로 pwd 를 변경한다
 command! Ncd :cd %:p:h
 
-" Set persistent_undo
-if has('persistent_undo')
-    let s:vimDir = '$HOME/.vim'
-    let &runtimepath.=','.s:vimDir
-    let s:undoDir = expand(s:vimDir . '/undodir')
-
-    call system('mkdir ' . s:vimDir)
-    call system('mkdir ' . s:undoDir)
-
-    let &undodir = s:undoDir
-    set undofile
-endif
