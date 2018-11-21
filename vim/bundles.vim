@@ -39,6 +39,7 @@ Plugin 'nixon/vim-vmath'
 Plugin 'vis'
 Plugin 'fisadev/dragvisuals.vim'
 Plugin 'johngrib/vim-f-hangul'
+Plugin 'majutsushi/tagbar'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'
@@ -66,6 +67,9 @@ Plugin 'elmcast/elm-vim'
 " Chess
 Plugin 'pgn.vim'
 Plugin 'Chess-files-.pgn-extension'
+
+" golang
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
