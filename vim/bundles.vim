@@ -41,6 +41,10 @@ Plugin 'fisadev/dragvisuals.vim'
 Plugin 'johngrib/vim-f-hangul'
 Plugin 'majutsushi/tagbar'
 
+" PHP
+Plugin 'stanangeloff/php.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
+
 " Wiki
 Plugin 'vimwiki/vimwiki'
 Plugin 'mhinz/vim-startify'
