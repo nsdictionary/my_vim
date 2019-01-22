@@ -39,8 +39,10 @@ set re=1
 set conceallevel=0
 
 "esc to english
-let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-let g:XkbSwitchEnabled = 1
+if filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
+  let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+  let g:XkbSwitchEnabled = 1
+endif
 
 "Shortcut to rapidly toggle `set list`
 nmap <leader>li :set list!<CR>
