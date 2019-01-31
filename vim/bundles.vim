@@ -45,6 +45,12 @@ Plugin 'majutsushi/tagbar'
 Plugin 'stanangeloff/php.vim'
 Plugin '2072/PHP-Indenting-for-VIm'
 
+" Javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'mattn/emmet-vim'
+Plugin 'w0rp/ale'
+
 " Wiki
 Plugin 'vimwiki/vimwiki'
 Plugin 'mhinz/vim-startify'

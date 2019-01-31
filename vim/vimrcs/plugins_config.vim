@@ -11,6 +11,7 @@ source ~/.vim/vimrcs/init/init_markdown.vim
 source ~/.vim/vimrcs/init/init_vimux.vim
 source ~/.vim/vimrcs/init/init_vimwiki.vim
 source ~/.vim/vimrcs/init/init_startify.vim
+source ~/.vim/vimrcs/init/init_js.vim
 
 
 "----------------------------------------------------------------------"
