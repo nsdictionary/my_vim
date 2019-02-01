@@ -65,21 +65,21 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'itspriddle/vim-marked'
 
 " Clojure
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'paredit.vim'
-Plugin 'venantius/vim-cljfmt'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'tpope/vim-fireplace'
+" Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'paredit.vim'
+" Plugin 'venantius/vim-cljfmt'
 
 " Elm
-Plugin 'elmcast/elm-vim'
+" Plugin 'elmcast/elm-vim'
 
 " Chess
-Plugin 'pgn.vim'
-Plugin 'Chess-files-.pgn-extension'
+" Plugin 'pgn.vim'
+" Plugin 'Chess-files-.pgn-extension'
 
 " golang
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
