@@ -20,6 +20,11 @@ let maplocalleader = "\\"
 
 " Fast saving
 nmap <leader>w :w!<cr>
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Qa qa
 
 "set relativenumber
 set number
@@ -37,6 +42,9 @@ set nocursorline
 set norelativenumber
 set re=1
 set conceallevel=0
+
+" CSS autocompletion
+set omnifunc=syntaxcomplete#Complete
 
 "esc to english
 if filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
