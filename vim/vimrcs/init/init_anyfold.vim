@@ -1,4 +1,4 @@
-autocmd Filetype ruby,php,python,javascript,php,css,json,yaml let b:anyfold_activate=1
+autocmd Filetype ruby,php,python,javascript,php,css,json,yaml AnyFoldActivate
 let anyfold_fold_comments=0
 let anyfold_fold_toplevel=0
 set foldlevel=0
