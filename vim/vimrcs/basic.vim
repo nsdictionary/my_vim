@@ -36,7 +36,7 @@ nnoremap <CR> :nohlsearch<CR><CR>
 " improving vim rendering
 set ttyfast
 set lazyredraw
-set synmaxcol=128
+" set synmaxcol=128
 set nocursorcolumn
 set nocursorline
 set norelativenumber
