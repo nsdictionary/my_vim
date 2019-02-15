@@ -184,6 +184,7 @@ syntax on
 
 if has('gui_running')
   color luna
+  set guioptions=
 else
   color luna-term
 endif
