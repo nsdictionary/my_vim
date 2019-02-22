@@ -66,6 +66,15 @@ let NERDSpaceDelims=1
 
 
 "----------------------------------------------------------------------"
+" RainbowParentheses
+"----------------------------------------------------------------------"
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+
+"----------------------------------------------------------------------"
 " vim-better-whitespace
 "----------------------------------------------------------------------"
 highlight ExtraWhitespace ctermbg=red
