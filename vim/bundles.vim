@@ -40,6 +40,7 @@ Plugin 'vis'
 Plugin 'fisadev/dragvisuals.vim'
 Plugin 'johngrib/vim-f-hangul'
 Plugin 'majutsushi/tagbar'
+Plugin 'hesselbom/vim-hsftp'
 
 " PHP
 Plugin 'stanangeloff/php.vim'
