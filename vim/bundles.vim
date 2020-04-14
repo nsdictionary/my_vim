@@ -72,6 +72,10 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'paredit.vim'
 Plugin 'venantius/vim-cljfmt'
 
+"rust
+Plugin 'rust-lang/rust.vim'
+Plugin 'mattn/webapi-vim' "Playgen
+
 " Elm
 " Plugin 'elmcast/elm-vim'
 
