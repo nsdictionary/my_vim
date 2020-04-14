@@ -1,0 +1,86 @@
+
+let mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Qa qa
+
+" Gvim path
+set gvimpath=/usr/local/opt/macvim/bin/mvim
+
+"----------------------------------------------------------------------"
+" Mimic Emacs key binding
+"----------------------------------------------------------------------"
+" Map scroll key bind
+nnoremap <C-p> <C-y>
+nnoremap <C-n> <C-e>
+
+" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+map <C-E> $
+map <C-A> ^
+noremap <c-i> <c-a>
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+vnoremap <C-a> ^
+vnoremap <C-e> $
+
+" Emacs Line Editing in Insert Mode Only
+inoremap <C-K> <Esc>lDa
+inoremap <C-U> <Esc>d0xi
+inoremap <C-Y> <Esc>pa
+inoremap <C-P> <Up>
+inoremap <C-N> <Down>
+inoremap <C-B> <Left>
+inoremap <C-F> <Right>
+inoremap <C-X><C-S> <Esc>:w<CR>a
+
+" Edit
+inoremap <A-x> <Esc>:
+inoremap <A-f> <Esc>lwi
+inoremap <A-b> <Esc>bi
+inoremap <A-S-f> <Esc>lWi
+inoremap <A-S-b> <Esc>Bi
+
+"----------------------------------------------------------------------"
+" Moving around, tabs, windows and buffers
+"----------------------------------------------------------------------"
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <c-space> ?
+
+" Smart way to move between windows
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+"----------------------------------------------------------------------"
+" Text, tab and indent related
+"----------------------------------------------------------------------"
+" Use spaces instead of tabs
+set expandtab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+set clipboard=unnamed,unnamedplus
+
