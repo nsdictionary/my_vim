@@ -50,8 +50,3 @@ autocmd FileType clojure nmap <buffer> cpP :Eval<cr>
 "----------------------------------------------------------------------"
 au BufNewFile,BufRead *.pgn    setf pgn
 
-
-"----------------------------------------------------------------------"
-" rust section
-"----------------------------------------------------------------------"
-au FileType rust nnoremap <F5> :RustRun<CR>
