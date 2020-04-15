@@ -1,7 +1,8 @@
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
 
-au FileType rust nnoremap <F5> :RustRun<CR>
+au FileType rust nnoremap <F5> :CargoRun<CR>
+au FileType rust nnoremap <F6> :RustRun<CR>
 
 "racer
 let g:racer_experimental_completer = 0

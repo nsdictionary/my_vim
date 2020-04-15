@@ -75,6 +75,7 @@ Plugin 'venantius/vim-cljfmt'
 "rust
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
+Plugin 'timonv/vim-cargo'
 Plugin 'mattn/webapi-vim' "Playgen
 
 " Elm
