@@ -21,6 +21,7 @@ au FileType go nnoremap <Leader>gd :GoDef<CR>
 " Markdown section
 "----------------------------------------------------------------------"
 autocmd BufNewFile,BufReadPost *.md,*.taskpaper set filetype=markdown
+autocmd FileType vimwiki,markdown let g:indentLine_setConceal = 0
 
 
 "----------------------------------------------------------------------"
