@@ -21,8 +21,8 @@ nmap <Leader>whh <Plug>Vimwiki2HTMLBrowse
 nmap <LocalLeader>wt :VimwikiTable<CR>
 nmap <LocalLeader>ws :VimwikiSplitLink<CR>
 nmap <LocalLeader>wv :VimwikiVSplitLink<CR>
-nmap <S-Right> <Plug>VimwikiFollowLink
-nmap <S-Left> <Plug>VimwikiGoBackLink
+au FileType vimwiki nmap <Enter> <Plug>VimwikiFollowLink
+au FileType vimwiki nmap <Backspace> <Plug>VimwikiGoBackLink
 
 function! LastModified()
   if g:md_modify_disabled
