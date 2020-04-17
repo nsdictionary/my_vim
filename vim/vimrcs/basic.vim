@@ -125,6 +125,7 @@ set noswapfile
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <c-space> ?
+map ? :<C-u>OverCommandLine<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
