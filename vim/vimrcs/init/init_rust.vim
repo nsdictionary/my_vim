@@ -1,11 +1,12 @@
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 0
 let g:rust_clip_command = 'pbcopy'
 
 au FileType rust nnoremap <F5> :CargoRun<CR>
 au FileType rust nnoremap <F6> :RustRun<CR>
+au FileType rust nnoremap <F7> :RustFmt<CR>
 
 "racer
-let g:racer_experimental_completer = 0
+let g:racer_experimental_completer = 1
 let g:racer_insert_paren = 1
 
 augroup Racer
@@ -16,3 +17,5 @@ augroup Racer
     autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
     autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
 augroup END
+
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
