@@ -46,12 +46,6 @@ set conceallevel=0
 " CSS autocompletion
 set omnifunc=syntaxcomplete#Complete
 
-"esc to english
-if filereadable('/usr/local/lib/libInputSourceSwitcher.dylib')
-  let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-  let g:XkbSwitchEnabled = 1
-endif
-
 "Shortcut to rapidly toggle `set list`
 nmap <leader>li :set list!<CR>
 
