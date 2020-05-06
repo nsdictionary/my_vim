@@ -1,9 +1,9 @@
 let g:vimwiki_list = [
     \{
-    \   'path': '~/Dropbox/wiki',
+    \   'path': '~/Dropbox/blog/wiki',
     \   'ext' : '.md',
     \   'syntax': 'markdown',
-    \   'diary_rel_path': 'private/diary',
+    \   'diary_rel_path': 'wiki/private/diary',
     \},
 \]
 let g:vimwiki_conceallevel = 0
