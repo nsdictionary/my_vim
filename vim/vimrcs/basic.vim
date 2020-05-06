@@ -31,7 +31,8 @@ set number
 set showmatch
 set hlsearch
 set ic
-nnoremap <CR> :nohlsearch<CR><CR>
+" nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <esc><esc> :silent! nohls<CR>
 
 " improving vim rendering
 set ttyfast
