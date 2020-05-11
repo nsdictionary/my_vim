@@ -50,6 +50,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 Plugin 'w0rp/ale'
+Plugin 'evanleck/vim-svelte'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'
