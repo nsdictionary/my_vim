@@ -44,6 +44,7 @@ Plugin 'hesselbom/vim-hsftp'
 " PHP
 Plugin 'stanangeloff/php.vim'
 Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'joonty/vdebug'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
