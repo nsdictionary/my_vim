@@ -15,6 +15,7 @@ map <c-space> ?
 
 let mapleader = ","
 map <leader>nn :action ActivateTerminalToolWindow<cr>
+map <leader>c<space> :action CommentByLineComment<cr>
 
 "----------------------------------------------------------------------"
 " Mimic Emacs key binding
