@@ -83,8 +83,11 @@ Plugin 'mattn/webapi-vim' "Playgen
 " Plugin 'elmcast/elm-vim'
 
 " Chess
-" Plugin 'pgn.vim'
-" Plugin 'Chess-files-.pgn-extension'
+Plugin 'pgn.vim'
+Plugin 'Chess-files-.pgn-extension'
+
+" Python
+Plugin 'klen/python-mode'
 
 " golang
 " Plugin 'fatih/vim-go'
