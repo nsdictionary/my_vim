@@ -52,6 +52,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 Plugin 'w0rp/ale'
 Plugin 'evanleck/vim-svelte'
+Plugin 'leafgarland/typescript-vim'
 
 " Wiki
 Plugin 'vimwiki/vimwiki'
