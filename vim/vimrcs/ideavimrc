@@ -57,3 +57,4 @@ inoremap <A-S-b> <Esc>Bi
 set surround
 "set multiple-cursors
 
+set ideajoin
