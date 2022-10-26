@@ -51,7 +51,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 Plugin 'w0rp/ale'
-Plugin 'evanleck/vim-svelte'
 Plugin 'leafgarland/typescript-vim'
 
 " Wiki
@@ -80,18 +79,8 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'timonv/vim-cargo'
 Plugin 'mattn/webapi-vim' "Playgen
 
-" Elm
-" Plugin 'elmcast/elm-vim'
-
-" Chess
-Plugin 'pgn.vim'
-Plugin 'Chess-files-.pgn-extension'
-
 " Python
 Plugin 'klen/python-mode'
-
-" golang
-" Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on

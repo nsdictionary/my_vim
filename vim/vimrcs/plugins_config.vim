@@ -62,9 +62,11 @@ let NERDSpaceDelims=1
 "----------------------------------------------------------------------"
 " comfortable-motion
 "----------------------------------------------------------------------"
-let g:comfortable_motion_no_default_key_mappings = 1
-nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
-nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
+if !has('vscode')
+  let g:comfortable_motion_no_default_key_mappings = 1
+  nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
+  nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
+endif
 
 
 "----------------------------------------------------------------------"
@@ -93,14 +95,6 @@ nmap <Leader><Leader>c :Calendar -view=year -split=vertical -width=27<CR>
 "nmap <Leader><Leader>c :Calendar -view=clock<CR>
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
-
-
-"----------------------------------------------------------------------"
-" Elm
-"----------------------------------------------------------------------"
-let g:elm_setup_keybindings = 0
-let g:elm_format_autosave = 1
-nnoremap <LocalLeader>ef :ElmFormat<CR>
 
 
 "----------------------------------------------------------------------"
