@@ -34,6 +34,9 @@ set ic
 " nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <esc><esc> :silent! nohls<CR>
 
+" Turn off the default matchparen plugin
+let loaded_matchparen = 1
+
 " improving vim rendering
 set ttyfast
 set lazyredraw
