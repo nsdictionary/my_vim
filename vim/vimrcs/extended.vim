@@ -40,8 +40,8 @@ if has('win32')
     command! GetFileName :let @*=substitute(expand("%"), "/", "\\", "g")
     command! GetFileAddress :let @*=substitute(expand("%:p"), "/", "\\", "g")<CR>
 else
-    command! GetFileName :let @*=expand('%')
-    command! GetFileAddress :let @*=expand('%:p')
+    command! GetFileName :let @+=expand('%')
+    command! GetFileAddress :let @+=expand('%:p')
 endif
 
 " 현재 편집중인 파일 경로로 pwd 를 변경한다
