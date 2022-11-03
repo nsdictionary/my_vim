@@ -1,0 +1,28 @@
+snippet foreach
+foreach ($${1:object} as $${2:key}=>$${3:value}) {
+    ${0:$$1[$$2]}
+}
+endsnippet
+
+snippet today
+`date +%Y-%m-%d`
+endsnippet
+
+snippet ii "magic import" b
+import `!p
+def formatVariableName(path):
+  parts = path.split('/')
+  module = parts[0]
+  if len(parts) > 1:
+    return parts[-1]
+  else:
+    return re.sub(r'[_\-]', '', module.title())
+snip.rv = formatVariableName(t[1])
+` from '${1}';$0
+endsnippet
+
+# 변수 선언
+snippet v "$var = value;"
+$${1:var} = ${2:value};
+${3}
+endsnippet

@@ -8,79 +8,89 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'The-NERD-Tree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'mileszs/ack.vim'
 Plugin 'mru.vim'
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'kien/ctrlp.vim'
 Plugin 'bufexplorer.zip'
-Plugin 'tpope/vim-endwise'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ajh17/vimcompletesme'
-Plugin 'yggdroot/indentline'
-Plugin 'osyo-manga/vim-over'
-Plugin 'johngrib/vim-game-code-break'
-Plugin 'johngrib/vim-game-snake'
-Plugin 'scrooloose/syntastic'
-Plugin 'elzr/vim-json'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'pseewald/vim-anyfold'
-Plugin 'tpope/vim-repeat'
-Plugin 'yuttie/comfortable-motion.vim'
-Plugin 'benmills/vimux'
-Plugin 'itchyny/calendar.vim'
-Plugin 'nixon/vim-vmath'
 Plugin 'vis'
-Plugin 'fisadev/dragvisuals.vim'
-Plugin 'johngrib/vim-f-hangul'
-Plugin 'majutsushi/tagbar'
-Plugin 'hesselbom/vim-hsftp'
-
-" PHP
-Plugin 'stanangeloff/php.vim'
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'joonty/vdebug'
-
-" Javascript
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'mattn/emmet-vim'
-Plugin 'w0rp/ale'
-Plugin 'leafgarland/typescript-vim'
-
-" Wiki
-Plugin 'vimwiki/vimwiki'
-Plugin 'mhinz/vim-startify'
-
-" Goyo
-Plugin 'junegunn/goyo.vim'
-Plugin 'amix/vim-zenroom2'
-
-" Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'itspriddle/vim-marked'
-
-" Clojure
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'paredit.vim'
-Plugin 'venantius/vim-cljfmt'
-
-"rust
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'timonv/vim-cargo'
-Plugin 'mattn/webapi-vim' "Playgen
-
-" Python
-Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
+
+"----------------------------------------------------------------------"
+"" Vim-plug config
+"----------------------------------------------------------------------"
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'mileszs/ack.vim'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'airblade/vim-gitgutter'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-endwise'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'scrooloose/nerdcommenter'
+Plug 'yggdroot/indentline'
+Plug 'osyo-manga/vim-over'
+Plug 'johngrib/vim-game-code-break'
+Plug 'johngrib/vim-game-snake'
+Plug 'scrooloose/syntastic'
+Plug 'elzr/vim-json'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'pseewald/vim-anyfold'
+Plug 'tpope/vim-repeat'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'benmills/vimux'
+Plug 'itchyny/calendar.vim'
+Plug 'nixon/vim-vmath'
+Plug 'fisadev/dragvisuals.vim'
+Plug 'johngrib/vim-f-hangul'
+Plug 'majutsushi/tagbar'
+Plug 'hesselbom/vim-hsftp'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+
+" PHP
+Plug 'stanangeloff/php.vim'
+Plug '2072/PHP-Indenting-for-VIm'
+Plug 'joonty/vdebug'
+
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'mattn/emmet-vim'
+Plug 'w0rp/ale'
+Plug 'leafgarland/typescript-vim'
+
+" Wiki
+Plug 'vimwiki/vimwiki'
+Plug 'mhinz/vim-startify'
+
+" Goyo
+Plug 'junegunn/goyo.vim'
+Plug 'amix/vim-zenroom2'
+
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'itspriddle/vim-marked'
+
+" Clojure
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'venantius/vim-cljfmt'
+
+"rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'timonv/vim-cargo'
+Plug 'mattn/webapi-vim' "Playgen
+
+" Python
+Plug 'klen/python-mode'
+
+call plug#end()
+
