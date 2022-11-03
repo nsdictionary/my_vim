@@ -1,8 +1,8 @@
 let g:vdebug_options = {
-      \'server': 'localhost',
-      \'port': '9001',
+      \'server': '172.30.1.13',
+      \'port': '9003',
       \'path_maps': {
-        \ '/usr/local/bs/rts/': '/Users/sam/Workspace/fairstudios/rts-server/rts/'
+        \ '/usr/local/bs/rts/': '/home/sam/Workspace/rts-server/'
       \}
     \}
 
