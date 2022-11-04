@@ -52,6 +52,7 @@ Plug 'majutsushi/tagbar'
 Plug 'hesselbom/vim-hsftp'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
+Plug 'dbakker/vim-projectroot'
 
 " PHP
 Plug 'stanangeloff/php.vim'

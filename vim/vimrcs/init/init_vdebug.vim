@@ -18,3 +18,12 @@ let g:vdebug_keymap = {
 \    'get_context': "<LocalLeader>c",
 \    "eval_under_cursor" : "<LocalLeader>e"
 \}
+
+function! SetupDebug()
+  let g:vdebug_options['path_maps'] = {'/usr/local/bs/rts/': call('projectroot#get', a:000)}
+  " Hack to override vdebug options
+  source ~/.local/share/nvim/plugged/vdebug/plugin/vdebug.vim
+endfunction
+
+" autocmd VimEnter * :call SetupDebug()
+noremap <Leader>sd :call SetupDebug()<CR>
