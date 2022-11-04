@@ -47,3 +47,10 @@ endif
 " 현재 편집중인 파일 경로로 pwd 를 변경한다
 command! Ncd :cd %:p:h
 
+" Remove tailing whitespace
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+noremap <Leader>t :call TrimWhitespace()<CR>
