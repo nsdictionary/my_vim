@@ -53,6 +53,7 @@ Plug 'hesselbom/vim-hsftp'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'dbakker/vim-projectroot'
+Plug 'xiyaowong/nvim-cursorword'
 
 " PHP
 Plug 'stanangeloff/php.vim'
