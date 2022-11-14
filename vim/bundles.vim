@@ -50,10 +50,13 @@ Plug 'fisadev/dragvisuals.vim'
 Plug 'johngrib/vim-f-hangul'
 Plug 'majutsushi/tagbar'
 Plug 'hesselbom/vim-hsftp'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'dbakker/vim-projectroot'
 Plug 'xiyaowong/nvim-cursorword'
+
+if !empty($DISPLAY)
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 
 " PHP
 Plug 'stanangeloff/php.vim'

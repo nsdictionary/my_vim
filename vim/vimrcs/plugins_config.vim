@@ -15,8 +15,11 @@ source ~/.vim/vimrcs/init/init_js.vim
 source ~/.vim/vimrcs/init/init_rust.vim
 source ~/.vim/vimrcs/init/init_vdebug.vim
 source ~/.vim/vimrcs/init/init_ultisnips.vim
-source ~/.vim/vimrcs/init/init_coc.vim
 source ~/.vim/vimrcs/init/init_nvim_cursorword.vim
+
+if !empty($DISPLAY)
+  source ~/.vim/vimrcs/init/init_coc.vim
+endif
 
 
 "----------------------------------------------------------------------"
