@@ -1,0 +1,719 @@
+"----------------------------------------------------------------------"
+" General
+"----------------------------------------------------------------------"
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+let maplocalleader = "\\"
+
+" Fast saving
+nmap <leader>w :w!<cr>
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Qa qa
+
+"set relativenumber
+set number
+set showmatch
+set hlsearch
+set ic
+" nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <esc><esc> :silent! nohls<CR>
+
+" Turn off the default matchparen plugin
+let loaded_matchparen = 1
+
+" improving vim rendering
+set ttyfast
+set lazyredraw
+" set synmaxcol=128
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+set re=1
+set conceallevel=0
+
+"Shortcut to rapidly toggle `set list`
+nmap <leader>li :set list!<CR>
+
+"Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
+
+" Resize split windows
+nnoremap <silent> - :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> _ :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> 0 :vertical res+5<CR>
+nnoremap <silent> 9 :vertical res-5<CR>
+
+" Backsacpe
+set backspace=indent,eol,start
+
+"----------------------------------------------------------------------"
+" Mimic Emacs key binding
+"----------------------------------------------------------------------"
+" Map scroll key bind
+nnoremap <C-p> <C-y>
+nnoremap <C-n> <C-e>
+
+" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+map <C-E> $
+map <C-A> ^
+noremap <c-i> <c-a>
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+vnoremap <C-a> ^
+vnoremap <C-e> $
+
+" Emacs Line Editing in Insert Mode Only
+inoremap <C-K> <Esc>lDa
+inoremap <C-U> <Esc>d0xi
+inoremap <C-Y> <Esc>pa
+inoremap <C-P> <Up>
+inoremap <C-N> <Down>
+inoremap <C-B> <Left>
+inoremap <C-F> <Right>
+inoremap <C-X><C-S> <Esc>:w<CR>a
+
+" Edit
+inoremap <A-x> <Esc>:
+inoremap <A-f> <Esc>lwi
+inoremap <A-b> <Esc>bi
+inoremap <A-S-f> <Esc>lWi
+inoremap <A-S-b> <Esc>Bi
+
+
+"----------------------------------------------------------------------"
+" Files, backups and undo
+"----------------------------------------------------------------------"
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+
+"----------------------------------------------------------------------"
+" Moving around, tabs, windows and buffers
+"----------------------------------------------------------------------"
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <c-space> ?
+map ? :<C-u>OverCommandLine<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Close the current buffer
+map <leader>bd :Bclose<cr>:tabclose<cr>gT
+
+" Close all the buffers
+map <leader>ba :bufdo bd<cr>
+
+map <F2> :bprevious<CR>
+map <F3> :bnext<CR>
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+
+" Let 'tl' toggle between this and the last accessed tab
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+" Specify the behavior when switching between buffers
+try
+  set switchbuf=useopen,usetab,newtab
+  set stal=2
+catch
+endtry
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+"----------------------------------------------------------------------"
+" Status line
+"----------------------------------------------------------------------"
+" Always show the status line
+set laststatus=2
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+
+"----------------------------------------------------------------------"
+" Colors and Fonts
+"----------------------------------------------------------------------"
+syntax on
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+try
+    colorscheme darkblue 
+catch
+endtry
+
+set background=dark
+set guifont=Bitstream_Vera_Sans_Mono:h14:cANSI:qDRAFT
+
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Set split window postion
+set splitright
+set splitbelow
+
+" Make the 81st column stand out
+highlight ColorColumn ctermbg=green ctermfg=black
+call matchadd('ColorColumn', '\%81v', 100)
+
+
+
+"----------------------------------------------------------------------"
+" Text, tab and indent related
+"----------------------------------------------------------------------"
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+set clipboard=unnamed " This enable use system clipboard. You sholud upgrade vim before use
+
+
+"----------------------------------------------------------------------"
+" Helper functions
+"----------------------------------------------------------------------"
+" Don't close window, when deleting a buffer
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+    let l:currentBufNum = bufnr("%")
+    let l:alternateBufNum = bufnr("#")
+
+    if buflisted(l:alternateBufNum)
+        buffer #
+    else
+        bnext
+    endif
+
+    if bufnr("%") == l:currentBufNum
+        new
+    endif
+
+    if buflisted(l:currentBufNum)
+        execute("bdelete! ".l:currentBufNum)
+    endif
+endfunction
+
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
+
+
+"----------------------------------------------------------------------"
+" Fast editing and reloading of vimrc configs
+"----------------------------------------------------------------------"
+map <leader>e :e! ~\_vimrc<cr>
+autocmd! bufwritepost vimrc source ~\_vimrc
+
+
+"----------------------------------------------------------------------"
+" => Command mode related
+"----------------------------------------------------------------------"
+" Bash like keys for the command line
+cnoremap <C-A>		<Home>
+cnoremap <C-E>		<End>
+cnoremap <C-K>		<C-U>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
+
+
+"----------------------------------------------------------------------"
+" Parenthesis/bracket
+"----------------------------------------------------------------------"
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+
+
+"----------------------------------------------------------------------"
+" General abbreviations
+"----------------------------------------------------------------------"
+iab xdate <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
+
+
+"----------------------------------------------------------------------"
+" Functions
+"----------------------------------------------------------------------"
+" http://vim.wikia.com/wiki/Copy_filename_to_clipboard
+if has('win32')
+    command! GetFileName :let @*=substitute(expand("%"), "/", "\\", "g")
+    command! GetFileAddress :let @*=substitute(expand("%:p"), "/", "\\", "g")<CR>
+else
+    command! GetFileName :let @+=expand('%')
+    command! GetFileAddress :let @+=expand('%:p')
+endif
+
+" 현재 편집중인 파일 경로로 pwd 를 변경한다
+command! Ncd :cd %:p:h
+
+" Remove tailing whitespace
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+noremap <Leader>t :call TrimWhitespace()<CR>
+
+
+"----------------------------------------------------------------------"
+" Ruby section
+"----------------------------------------------------------------------"
+au FileType ruby setl sw=2 sts=2 et
+let ruby_no_expensive=1
+
+"----------------------------------------------------------------------"
+" PHP section
+"----------------------------------------------------------------------"
+au FileType php setl sw=4 sts=4 et
+
+"----------------------------------------------------------------------"
+" Markdown section
+"----------------------------------------------------------------------"
+autocmd BufNewFile,BufReadPost *.md,*.taskpaper set filetype=markdown
+autocmd FileType vimwiki,markdown let g:indentLine_setConceal = 0
+
+"----------------------------------------------------------------------"
+" JSON section
+"----------------------------------------------------------------------"
+let g:vim_json_syntax_conceal = 0
+
+"----------------------------------------------------------------------"
+"" Vim-plug config
+"----------------------------------------------------------------------"
+call plug#begin()
+
+Plug 'vim-scripts/vis'
+Plug 'yegappan/mru'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'mileszs/ack.vim'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'airblade/vim-gitgutter'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-endwise'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'scrooloose/nerdcommenter'
+Plug 'yggdroot/indentline'
+Plug 'elzr/vim-json'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'pseewald/vim-anyfold'
+Plug 'tpope/vim-repeat'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'nixon/vim-vmath'
+Plug 'fisadev/dragvisuals.vim'
+Plug 'johngrib/vim-f-hangul'
+Plug 'majutsushi/tagbar'
+Plug 'hesselbom/vim-hsftp'
+Plug 'dbakker/vim-projectroot'
+
+if !empty($DISPLAY)
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+
+" PHP
+Plug 'stanangeloff/php.vim'
+Plug '2072/PHP-Indenting-for-VIm'
+
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'mattn/emmet-vim'
+Plug 'w0rp/ale'
+Plug 'leafgarland/typescript-vim'
+
+" Wiki
+Plug 'vimwiki/vimwiki'
+Plug 'mhinz/vim-startify'
+
+" Goyo
+Plug 'junegunn/goyo.vim'
+Plug 'amix/vim-zenroom2'
+
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'itspriddle/vim-marked'
+
+" Python
+Plug 'klen/python-mode'
+
+call plug#end()
+
+"----------------------------------------------------------------------"
+" Vim airline
+"----------------------------------------------------------------------"
+let g:airline_powerline_fonts = 1
+
+"----------------------------------------------------------------------"
+" Projectroot
+"----------------------------------------------------------------------"
+let g:rootmarkers = ['.projectroot', 'docker-compose.yml', '.git', '.hg', '.svn', '.bzr','_darcs','build.xml']
+
+"----------------------------------------------------------------------"
+" Vimroom
+"----------------------------------------------------------------------"
+let g:goyo_width=100
+let g:goyo_margin_top = 2
+let g:goyo_margin_bottom = 2
+nnoremap <silent> <leader>z :Goyo<cr>
+
+"----------------------------------------------------------------------"
+" MRU plugin
+"----------------------------------------------------------------------"
+let MRU_Max_Entries = 400
+map <leader>f :MRU<CR>
+
+"----------------------------------------------------------------------"
+" YankStack
+"----------------------------------------------------------------------"
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+"----------------------------------------------------------------------"
+" Git gutter (Git diff)
+"----------------------------------------------------------------------"
+let g:gitgutter_enabled=0
+nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"----------------------------------------------------------------------"
+" NERDcommenter
+"----------------------------------------------------------------------"
+let NERDSpaceDelims=1
+
+"----------------------------------------------------------------------"
+" comfortable-motion
+"----------------------------------------------------------------------"
+if !has('vscode')
+  let g:comfortable_motion_no_default_key_mappings = 1
+  nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
+  nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
+endif
+
+"----------------------------------------------------------------------"
+" vim-better-whitespace
+"----------------------------------------------------------------------"
+highlight ExtraWhitespace ctermbg=red
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 0
+let g:better_whitespace_filetypes_blacklist=['calendar', 'diff', 'gitcommit', 'help']
+
+"----------------------------------------------------------------------"
+" calendar
+"----------------------------------------------------------------------"
+nmap <Leader><Leader>c :Calendar -view=year -split=vertical -width=27<CR>
+"nmap <Leader><Leader>c :Calendar -view=year -split=horizontal -position=below -height=12<CR>
+"nmap <Leader><Leader>c :Calendar -view=clock<CR>
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
+"----------------------------------------------------------------------"
+" TagBar
+"----------------------------------------------------------------------"
+nmap <F4> :TagbarToggle<CR>
+let g:tagbar_left=1
+
+"----------------------------------------------------------------------"
+" vim-vmath
+"----------------------------------------------------------------------"
+vmap <expr>  ++  VMATH_YankAndAnalyse()
+nmap         ++  vip++
+
+"----------------------------------------------------------------------"
+" dragvisuals
+"----------------------------------------------------------------------"
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  F        DVB_Duplicate()
+
+"----------------------------------------------------------------------"
+" startify
+"----------------------------------------------------------------------"
+nmap <Leader>s :Startify<CR>
+nmap <Leader><Leader>s :SSave<CR>
+nmap <Leader><Leader>d :SDelete<CR>
+
+let g:startify_custom_header = [
+  \ ';; Happy hacking, sam - Vim ♥ you!',
+  \ ';; 행동을 통해 자신의 꿈에 실천의 기회를 주지 않는다면 영원히 기회는 없습니다.'
+  \ ]
+
+let g:startify_update_oldfiles = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_session_sort = 1
+
+let g:startify_commands = [
+  \ ':help startify',
+  \ ]
+
+let g:startify_list_order = [
+  \ ['    Sessions'],
+  \'sessions',
+  \ ['    Most Recently Used files'],
+  \'files',
+  \'bookmarks',
+  \ ['    Commands'],
+  \'commands'
+  \]
+
+"----------------------------------------------------------------------"
+" nerdtree
+"----------------------------------------------------------------------"
+let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+let g:NERDTreeMinimalMenu=1
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
+
+"----------------------------------------------------------------------"
+" markdown
+"----------------------------------------------------------------------"
+let g:vim_markdown_override_foldtext = 0
+let g:vim_markdown_folding_level = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_auto_insert_bullets = 0
+map <Leader>md :MarkedOpen<CR>
+
+"----------------------------------------------------------------------"
+" ale
+"----------------------------------------------------------------------"
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_lint_on_text_changed = 'never'
+
+" disable ale on svelte
+let g:ale_pattern_options = {
+      \'\.svelte$': {'ale_enabled': 0},
+      \'\.ts$': {'ale_enabled': 0}
+      \}
+
+"----------------------------------------------------------------------"
+" emmet
+"----------------------------------------------------------------------"
+" let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
+"----------------------------------------------------------------------"
+" indentline
+"----------------------------------------------------------------------"
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#4a4a59'
+let g:indentLine_char = '│'
+" let g:indentLine_setConceal = 0
+" let g:indentLine_fileTypeExclude = ['json']
+" let g:indentLine_fileType = ['ruby', 'go', 'php', 'python', 'bash', 'javascript', 'javascript.jsx', 'css', 'clojure', 'html', 'elm', 'lisp', 'vim']
+
+
+"----------------------------------------------------------------------"
+" ctrlp
+"----------------------------------------------------------------------"
+let g:ctrlp_working_path_mode = 0
+
+let g:ctrlp_map = '<c-f>'
+map <leader>j :CtrlP<cr>
+map <c-b> :CtrlPBuffer<cr>
+
+let g:ctrlp_max_height = 20
+let g:ctrlp_max_depth = 40
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+let g:ctrlp_user_command = {
+ \ 'types': {
+   \ 1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others'],
+   \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+   \ },
+ \ 'fallback': 'find %s -type f'
+ \ }
+
+
+"----------------------------------------------------------------------"
+" buf explorer
+"----------------------------------------------------------------------"
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+map <leader>o :BufExplorer<cr>
+
+
+"----------------------------------------------------------------------"
+" anyfold
+"----------------------------------------------------------------------"
+autocmd Filetype ruby,php,python,javascript,php,css,json,yaml AnyFoldActivate
+let anyfold_fold_comments=0
+let anyfold_fold_toplevel=0
+set foldlevel=0
+autocmd User anyfoldLoaded normal zR
+
+
+"----------------------------------------------------------------------"
+" vimwiki
+"----------------------------------------------------------------------"
+let g:vimwiki_list = [
+    \{
+    \   'path': '~\Dropbox\blog\wiki',
+    \   'ext' : '.md',
+    \   'syntax': 'markdown',
+    \   'diary_rel_path': 'wiki\private\diary',
+    \},
+\]
+let g:vimwiki_conceallevel = 0
+let g:vimwiki_global_ext = 0
+
+command! WikiIndex :VimwikiIndex
+nmap <Leader>ww <Plug>VimwikiIndex
+nmap <Leader>wt <Plug>VimwikiTabIndex
+nmap <Leader>ws <Plug>VimwikiUISelect
+nmap <Leader>wi <Plug>VimwikiDiaryIndex
+nmap <Leader>w<Leader>w <Plug>VimwikiMakeDiaryNote
+nmap <Leader>w<Leader>t <Plug>VimwikiTabMakeDiaryNote
+nmap <Leader>w<Leader>y <Plug>VimwikiMakeYesterdayDiaryNote
+nmap <Leader>wh <Plug>Vimwiki2HTML
+nmap <Leader>whh <Plug>Vimwiki2HTMLBrowse
+nmap <LocalLeader>wt :VimwikiTable<CR>
+nmap <LocalLeader>ws :VimwikiSplitLink<CR>
+nmap <LocalLeader>wv :VimwikiVSplitLink<CR>
+au FileType vimwiki nmap <Enter> <Plug>VimwikiFollowLink
+au FileType vimwiki nmap <Backspace> <Plug>VimwikiGoBackLink
+
+function! LastModified()
+  if g:md_modify_disabled
+    return
+  endif
+  if &modified
+    " echo('markdown updated time modified')
+    let save_cursor = getpos(".")
+    let n = min([10, line("$")])
+
+    exe 'keepjumps 1,' . n . 's#^\(.\{,10}updated\s*: \).*#\1' .
+          \ strftime('%Y-%m-%d %H:%M:%S +0900') . '#e'
+    call histdel('search', -1)
+    call setpos('.', save_cursor)
+  endif
+endfun
+function! NewTemplate()
+
+  let l:wiki_directory = v:false
+
+  for wiki in g:vimwiki_list
+    if expand('%:p:h') == expand(wiki.path)
+      let l:wiki_directory = v:true
+      break
+    endif
+  endfor
+
+  if !l:wiki_directory
+    return
+  endif
+
+  if line("$") > 1
+    return
+  endif
+
+  let l:template = []
+  call add(l:template, '---')
+  call add(l:template, 'layout  : wiki')
+  call add(l:template, 'title   : ')
+  call add(l:template, 'summary : ')
+  call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+  call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+  call add(l:template, 'tags    : ')
+  call add(l:template, 'toc     : true')
+  call add(l:template, 'public  : true')
+  call add(l:template, 'parent  : ')
+  call add(l:template, 'latex   : false')
+  call add(l:template, '---')
+  call add(l:template, '* TOC')
+  call add(l:template, '{:toc}')
+  call add(l:template, '')
+  call add(l:template, '# ')
+  call setline(1, l:template)
+  execute 'normal! G'
+  execute 'normal! $'
+
+  echom 'new wiki page has created'
+endfunction
+" augroup vimwikiauto
+  " autocmd BufWritePre *wiki/*.md keepjumps call LastModified()
+  " autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()
+" augroup END
+
+let g:md_modify_disabled = 0
