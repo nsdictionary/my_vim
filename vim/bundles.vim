@@ -97,5 +97,11 @@ Plug 'venantius/vim-cljfmt'
 " Python
 Plug 'klen/python-mode'
 
+" Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
 call plug#end()
 

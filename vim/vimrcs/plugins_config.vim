@@ -5,17 +5,18 @@ source ~\AppData\Local\nvim\.vim\vimrcs\init\init_buf_explorer.vim
 source ~\AppData\Local\nvim\.vim\vimrcs\init\init_ctrlp.vim
 source ~\AppData\Local\nvim\.vim\vimrcs\init\init_nerd_tree.vim
 source ~\AppData\Local\nvim\.vim\vimrcs\init\init_indentline.vim
-source ~\AppData\Local\nvim\.vim\vimrcs\init\init_syntastic.vim
+"source ~\AppData\Local\nvim\.vim\vimrcs\init\init_syntastic.vim
 source ~\AppData\Local\nvim\.vim\vimrcs\init\init_anyfold.vim
 source ~\AppData\Local\nvim\.vim\vimrcs\init\init_markdown.vim
 "source ~\AppData\Local\nvim\.vim\vimrcs\init\init_vimux.vim
-source ~\AppData\Local\nvim\.vim\vimrcs\init\init_vimwiki.vim
+"source ~\AppData\Local\nvim\.vim\vimrcs\init\init_vimwiki.vim
 source ~\AppData\Local\nvim\.vim\vimrcs\init\init_startify.vim
-source ~\AppData\Local\nvim\.vim\vimrcs\init\init_js.vim
+"source ~\AppData\Local\nvim\.vim\vimrcs\init\init_js.vim
 "source ~\AppData\Local\nvim\.vim\vimrcs\init\init_rust.vim
 "source ~\AppData\Local\nvim\.vim\vimrcs\init\init_vdebug.vim
-source ~\AppData\Local\nvim\.vim\vimrcs\init\init_ultisnips.vim
-source ~\AppData\Local\nvim\.vim\vimrcs\init\init_nvim_cursorword.vim
+"source ~\AppData\Local\nvim\.vim\vimrcs\init\init_ultisnips.vim
+"source ~\AppData\Local\nvim\.vim\vimrcs\init\init_nvim_cursorword.vim
+source ~\AppData\Local\nvim\.vim\vimrcs\init\init_dart.vim
 
 if !empty($DISPLAY)
   source ~\AppData\Local\nvim\.vim\vimrcs\init\init_coc.vim
