@@ -1,0 +1,4 @@
+source ~\AppData\Local\nvim\.vim\vimrcs\basic.vim
+source ~\AppData\Local\nvim\.vim\vimrcs\filetypes.vim
+source ~\AppData\Local\nvim\.vim\vimrcs\plugins_config.vim
+source ~\AppData\Local\nvim\.vim\vimrcs\extended.vim

@@ -4,7 +4,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~\vimfiles\bundle\Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -42,7 +42,7 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'pseewald/vim-anyfold'
 Plug 'tpope/vim-repeat'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'benmills/vimux'
+"Plug 'benmills/vimux'
 Plug 'itchyny/calendar.vim'
 Plug 'nixon/vim-vmath'
 Plug 'fisadev/dragvisuals.vim'
@@ -60,7 +60,7 @@ endif
 " PHP
 Plug 'stanangeloff/php.vim'
 Plug '2072/PHP-Indenting-for-VIm'
-Plug 'joonty/vdebug'
+"Plug 'joonty/vdebug'
 
 " Javascript
 Plug 'pangloss/vim-javascript'
@@ -89,10 +89,10 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'venantius/vim-cljfmt'
 
 "rust
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-Plug 'timonv/vim-cargo'
-Plug 'mattn/webapi-vim' "Playgen
+"Plug 'rust-lang/rust.vim'
+"Plug 'racer-rust/vim-racer'
+"Plug 'timonv/vim-cargo'
+"Plug 'mattn/webapi-vim' "Playgen
 
 " Python
 Plug 'klen/python-mode'

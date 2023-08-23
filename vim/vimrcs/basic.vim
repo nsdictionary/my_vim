@@ -61,7 +61,7 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 "load bundles
-source ~/.vim/bundles.vim
+source ~\AppData\Local\nvim\.vim\bundles.vim
 
 " Wrapped lines goes down/up to next row, rather than next line in file.
 nnoremap j gj
@@ -249,4 +249,12 @@ function! <SID>BufcloseCloseIt()
     if buflisted(l:currentBufNum)
         execute("bdelete! ".l:currentBufNum)
     endif
+endfunction
+
+
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
 endfunction
