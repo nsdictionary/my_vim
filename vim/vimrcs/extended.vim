@@ -2,7 +2,7 @@
 " Fast editing and reloading of vimrc configs
 "----------------------------------------------------------------------"
 map <leader>e :e! ~/.vim/vimrcs/basic.vim<cr>
-autocmd! bufwritepost vimrc source ~/.vim/vimrcs/basic.vim
+autocmd! bufwritepost vimrc source ~\AppData\Local\nvim\.vim\vimrcs\basic.vim
 
 
 "----------------------------------------------------------------------"

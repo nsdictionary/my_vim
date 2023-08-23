@@ -26,7 +26,8 @@ endif
 " Vim airline
 "----------------------------------------------------------------------"
 let g:airline_powerline_fonts = 1
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+set guifont=Bitstream\ Vera\ Sans\ Mono:h16
 
 
 "----------------------------------------------------------------------"
